@@ -1,0 +1,264 @@
+:root {
+    --primary: #0A84FF;      /* Azul Apple */
+    --secondary: #30D158;    /* Verde Apple */
+    --background: #1C1C1E;   /* Fondo oscuro */
+    --surface: #2C2C2E;      /* Superficie elevada */
+    --text-primary: #FFFFFF; /* Texto principal */
+    --text-secondary: #8E8E93; /* Texto secundario */
+    --border: #404040;       /* Bordes */
+    --error: #FF453A;        /* Rojo Apple */
+  }
+  
+  html {
+    min-height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", system-ui, sans-serif;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: var(--background);
+  }
+  
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--background);
+    color: var(--text-primary);
+    line-height: 1.6;
+    font-weight: 400;
+  }
+  
+  /* Header y Footer */
+  .headtop {
+    background: var(--surface);
+    border-bottom: 0.5px solid rgba(255,255,255,0.1);
+    padding: 1rem;
+    backdrop-filter: blur(20px);
+  }
+  
+  .headtop p {
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: -0.01em;
+  }
+  
+  .footer {
+    background: var(--surface);
+    color: var(--text-secondary);
+    padding: 1.5rem;
+    border-top: 0.5px solid rgba(255,255,255,0.1);
+  }
+  
+  /* Tarjetas */
+  .card {
+    background: var(--surface);
+    border-radius: 18px;
+    border: 0.5px solid var(--border);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    margin: 1rem 0;
+    overflow: hidden;
+    transition: transform 0.2s cubic-bezier(0.4,0,0.2,1);
+  }
+  
+  .card:hover {
+    transform: translateY(-2px);
+  }
+  
+  .card-header {
+    padding: 1.5rem;
+    border-bottom: 0.5px solid var(--border);
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+  }
+  
+  /* Formularios */
+  .form-control {
+    background: rgba(255,255,255,0.05);
+    border: 0.5px solid var(--border);
+    border-radius: 12px;
+    color: var(--text-primary);
+    padding: 0.9rem 1.2rem;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+  }
+  
+  .form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(10,132,255,0.15);
+    background: rgba(255,255,255,0.08);
+  }
+  
+  .form-label {
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  
+  /* Botones */
+  .btn {
+    padding: 0.9rem 1.6rem;
+    border-radius: 14px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    border: none;
+    transition: all 0.2s cubic-bezier(0.4,0,0.2,1);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .btn-primary {
+    background: var(--primary);
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    background: #007AFF;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(10,132,255,0.25);
+  }
+  
+  .btn-secondary {
+    background: var(--surface);
+    color: var(--text-primary);
+    border: 0.5px solid var(--border);
+  }
+  
+  .btn-secondary:hover {
+    background: rgba(255,255,255,0.05);
+    transform: translateY(-1px);
+  }
+  
+  /* Alertas */
+  .alert {
+    padding: 1rem 1.5rem;
+    border-radius: 14px;
+    border: 0.5px solid;
+    font-weight: 500;
+    backdrop-filter: blur(20px);
+  }
+  
+  .alert-danger {
+    background: rgba(255,69,58,0.15);
+    border-color: var(--error);
+    color: var(--error);
+  }
+  
+  /* Tablas */
+  .table {
+    background: var(--surface);
+    border-radius: 18px;
+    overflow: hidden;
+    border: 0.5px solid var(--border);
+  }
+  
+  .table thead th {
+    background: rgba(255,255,255,0.05);
+    color: var(--text-secondary);
+    padding: 1rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  
+  .table tbody td {
+    padding: 1rem;
+    border-bottom: 0.5px solid var(--border);
+  }
+  
+  /* Modales */
+  .modal-content {
+    background: var(--surface);
+    border-radius: 18px;
+    border: 0.5px solid var(--border);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+  }
+  
+  .modal-header {
+    border-bottom: 0.5px solid var(--border);
+    padding: 1.5rem;
+  }
+  
+  /* Efectos de profundidad */
+  .elevation-1 {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+  
+  .elevation-2 {
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  }
+  
+  /* Tipografía */
+  h1, h2, h3 {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+  }
+  
+  p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+  
+  /* Transiciones */
+  .fade-in {
+    animation: fadeIn 0.3s ease;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Scrollbar personalizada */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--background);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--surface);
+    border-radius: 4px;
+  }
+
+  /* Navbar personalizada */
+.navbar {
+    background: var(--surface) !important;
+    border-bottom: 0.5px solid var(--border);
+    padding: 0.5rem 1rem;
+}
+
+.navbar-brand {
+    font-size: 1.1rem;
+    letter-spacing: -0.01em;
+}
+
+/* Botones con íconos */
+.btn i {
+    font-size: 1.1em;
+    vertical-align: -2px;
+}
+
+/* Tablas dark personalizadas */
+.table {
+    --bs-table-bg: var(--surface);
+    --bs-table-color: var(--text-primary);
+    --bs-table-border-color: var(--border);
+}
+
+.table-hover > tbody > tr:hover {
+    --bs-table-accent-bg: rgba(255,255,255,0.03);
+}
